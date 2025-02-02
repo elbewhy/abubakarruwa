@@ -211,13 +211,17 @@ header .navbar ul li a:hover{
     justify-content: center;
     flex-wrap: wrap;
 }
-
+.nav-link{
+    cursor: focus;
+    color: white;
+    
+}
 .about .row .counter .box{
     width:20rem;
-    background:#222;
+    background:#222222;
     text-align: center;
     padding: 2rem;
-    margin:2rem;
+    margin:1rem;
 }
 
 .about .row .counter .box span{
@@ -243,7 +247,7 @@ header .navbar ul li a:hover{
     width:27rem;
     margin:4rem 1rem;
     padding-left: 4rem;
-    border-left: .2rem solid #fff;
+    border-left: .3rem solid #fff;
     position: relative;
 }
 
@@ -261,9 +265,9 @@ header .navbar ul li a:hover{
     padding-top: 1.5rem;
 }
 .education .box-container .box p{
-    font-size: 1.4rem;
+    font-size: 1.0rem;
     color:#eee;
-padding: 1rem 0;
+    padding: 1rem 0;
 }
 
 .education .box-container .box i{
@@ -306,16 +310,16 @@ overflow: hidden;
 cursor: pointer;
 }
 
-/*.portfolio .box-container .box img{
+.portfolio .box-container .box img{
 height:100%;
 width:100%;
-object-fit: cover;
+margin-top: 20px;
 }
 
 .portfolio .box-container .box:hover img{
-transform: scale(1.2);
+transform: scale(0.8);
 } 
-*/
+
 .contact .row{
 display: flex;
 align-items: center;
