@@ -1,6 +1,4 @@
-
-/* Created by Abubakar Ruwa  */ 
- 
+/* Created by Abubakar Ruwa */
  
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600&display=swap');
 
@@ -43,7 +41,7 @@ html::-webkit-scrollbar-thumb{
 body{
     background:#111;
     overflow-x: hidden;
-    padding-left: 35rem;
+    padding-left: 35rem; /* This is the key fix to make space for the fixed sidebar */
 }
 
 section{
@@ -65,7 +63,6 @@ section{
     padding:0 .5rem;
     font-size: 1.8rem;
     color: #4908ec;
-
 }
 
 .btn:hover{
@@ -97,6 +94,7 @@ header{
     justify-content: center;
     flex-flow: column;
     text-align: center;
+    padding-top: 15rem; /* Ensure content is not cut off at the very top */
 }
 
 header .user img{
@@ -104,6 +102,7 @@ header .user img{
     width:17rem;
     border-radius: 50%;
     object-fit: cover;
+    margin-top: 2rem;
     margin-bottom: 1rem;
     border:.7rem solid var(--yellow);
 }
@@ -126,7 +125,6 @@ header .navbar ul{
     list-style: none;
     padding:1rem 3rem;
 }
-
 
 header .navbar ul li a{
     display: block;
@@ -213,11 +211,12 @@ header .navbar ul li a:hover{
     justify-content: center;
     flex-wrap: wrap;
 }
+
 .nav-link{
-    cursor: focus;
+    cursor: pointer;
     color: white;
-    
 }
+
 .about .row .counter .box{
     width:20rem;
     background:#222222;
@@ -266,6 +265,7 @@ header .navbar ul li a:hover{
     color:#fff;
     padding-top: 1.5rem;
 }
+
 .education .box-container .box p{
     font-size: 1.0rem;
     color:#eee;
@@ -284,16 +284,14 @@ font-size: 2rem;
 color:#fff;
 background:var(--yellow);
 }
-.couses li {
-    
-    height:5rem;
-    width: 5rem;
-    line-height: 5rem;
-    text-align: center;
-    font-size: 2rem;
-    color:#fff;
-    }
 
+.couses li {
+    list-style: none; /* Make sure the lists inside are not styled by the parent */
+    text-align: left;
+    font-size: 1.7rem; /* Adjusted for better readability */
+    color: #eee;
+    padding: 0.5rem 0;
+}
 
 .portfolio .box-container{
 display: flex;
@@ -301,6 +299,7 @@ align-items: center;
 justify-content: center;
 flex-wrap: wrap;
 padding:2rem 0;
+
 }
 
 .portfolio .box-container .box{
@@ -321,6 +320,56 @@ margin-top: 20px;
 .portfolio .box-container .box:hover img{
 transform: scale(0.8);
 } 
+
+.skills .box-container {
+    display: flex;
+    align-items: flex-start; /* Aligns boxes to the top */
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 2rem 0;
+}
+
+.skills .box-container .box {
+    width: 27rem;
+    margin: 2rem 1rem;
+    padding: 2rem;
+    background: #222222;
+    text-align: center;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.skills .box-container .box h3 {
+    font-size: 2.5rem;
+    color: var(--yellow);
+    padding-top: 1rem;
+}
+
+.skills .box-container .box p {
+    font-size: 1.5rem;
+    color: #eee;
+    padding: 1rem 0;
+}
+
+.skills .box-container .box ul {
+    list-style: none;
+    padding: 0;
+    text-align: left;
+    width: 100%; /* Ensures list takes full width of the box */
+}
+
+.skills .box-container .box li {
+    color: #fff;
+    font-size: 1.7rem;
+    padding: 0.5rem 0;
+}
+
+.skills .box-container .box i {
+    font-size: 3rem;
+    color: var(--yellow);
+}
 
 .contact .row{
 display: flex;
@@ -388,8 +437,8 @@ bottom:7.5rem; right: 2rem;
 z-index: 100;
 display: none;
 }
-.footer{
 
+.footer{
 text-transform: none;
 color:#fff;
 font-size: 3rem;
@@ -398,79 +447,63 @@ text-align:center;
 }
 
 
-/* media queries  */
-
+/* media queries */
 @media (max-width:1200px){
-
-html{
-    font-size: 55%;
-}
-
-.home{
-    padding:1rem 4rem;
-}
-
+    html{
+        font-size: 55%;
+    }
+    .home{
+        padding:1rem 4rem;
+    }
 }
 
 @media (max-width:991px){
-
-header{
-   left:-120%;
-}
-
-#menu{
-   display: block;
-}
-
-header.toggle{
-left:0%;
-}
-
-body{
-   padding:0;
-}
-
+    header{
+        left:-120%;
+    }
+    #menu{
+        display: block;
+    }
+    header.toggle{
+        left:0%;
+    }
+    body{
+        padding:0;
+    }
 }
 
 @media (max-width:768px){
-
-html{
-    font-size: 50%;
-}
-
+    html{
+        font-size: 50%;
+    }
 }
 
 @media (max-width:400px){
-
-header{
-    width: 100vw;
+    header{
+        width: 100vw;
+    }
+    .heading{
+        margin:0 3rem;
+    }
+    .about .row .counter .box{
+        width: 100%;
+    }
+    .education .box-container .box{
+        width:100%;
+    }
+    .portfolio .box-container .box{
+        width:100%;
+    }
+    .contact .row form{
+        margin:3rem 0;
+    }
 }
 
-.heading{
-    margin:0 3rem;
-}
-
-.about .row .counter .box{
-    width: 100%;
-}
-
-.education .box-container .box{
-    width:100%;
-}
-
-.portfolio .box-container .box{
-    width:100%;
-}
-
-.contact .row form{
-    margin:3rem 0;
-}
-
-}
 #education p{
 font-weight:bold;
 font-size:18px;
 }
+
 #education h3{
 color :var(--yellow);
 }
